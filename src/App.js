@@ -12,7 +12,8 @@ import { SearchAppBar } from './SearchAppBar';
 
 
 const getPokemons = async () => {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
+  // const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000");
+  const response = await fetch("http://localhost:8080/pokemon");
   const data = await response.json();
 
   return data;
