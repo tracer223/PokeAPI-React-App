@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PokemonSprite from './PokemonSprite'
 
 export default function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
@@ -12,11 +13,14 @@ export default function PokemonList() {
   return (
     <div>
       <h1>Pokemon List</h1>
-      <ul>
+      <div>
         {pokemon.map(p => (
-          <><li key={p.name}>{p.name}</li><img key={p.name}>{p.img}</img></>
+          <>
+          <li key={p.name}>{p.name}</li>
+          <PokemonSprite pokemonName={p.name}/>
+          </>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
